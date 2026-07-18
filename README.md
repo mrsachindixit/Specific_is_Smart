@@ -2,8 +2,6 @@
 
 *By Sachin Dixit*
 
-![Sachin Dixit](assets/images/slide-1-img1.jpg)
-
 ## It Starts With…
 
 A picture of the integration landscape you begin from:
