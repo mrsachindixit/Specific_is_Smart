@@ -14,7 +14,7 @@ A picture of the integration landscape you begin from:
 
 <img src="assets/images/slide-2-img1.jpg" width="200" alt="We need to talk">
 
-## Protocols Are Different
+## Protocols are different
 
 Every system you connect to talks over a different protocol:
 
@@ -26,7 +26,7 @@ Every system you connect to talks over a different protocol:
 - `wss`
 - Some blah
 
-## Semantics Are Different
+## Semantics are different
 
 The same idea is exposed through different service styles:
 
@@ -38,7 +38,7 @@ The same idea is exposed through different service styles:
 - SFTP
 - FTPs
 
-## Formats Are Different
+## Formats are different
 
 And the payload formats never line up either:
 
@@ -161,9 +161,9 @@ The recurring shapes of this problem are captured by the Enterprise Integration 
 
 *© Gregor Hohpe, Bobby Woolf*
 
-## One Thing I Don't Know Why…
+## One thing I don't know Why…
 
-Usual attempts to handle these situations:
+Usual Attempts to handle these situations:
 
 - Standardized format
 - Generic Services
