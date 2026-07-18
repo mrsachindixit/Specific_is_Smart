@@ -1,4 +1,4 @@
-# Specific is Smart
+﻿# Specific is Smart
 
 *By Sachin Dixit*
 
@@ -6,19 +6,19 @@
 
 A picture of the integration landscape you begin from:
 
-![Your System connected to Their Systems and Some more Systems](assets/images/slide-2-diagram.png)
+<img src="assets/images/slide-2-diagram.png" width="560" alt="Your System connected to Their Systems and Some more Systems">
 
 - **Your System**
 - **Their Systems**
 - **Some more Systems**
 
-![We need to talk](assets/images/slide-2-img1.jpg)
+<img src="assets/images/slide-2-img1.jpg" width="200" alt="We need to talk">
 
 ## Protocols Are Different
 
 Every system you connect to talks over a different protocol:
 
-![Different protocols (http, ftp, wss) between systems](assets/images/slide-3-diagram.png)
+<img src="assets/images/slide-3-diagram.png" width="560" alt="Different protocols (http, ftp, wss) between systems">
 
 - Their Systems ↔ Your System ↔ Some more Systems
 - `http`
@@ -30,7 +30,7 @@ Every system you connect to talks over a different protocol:
 
 The same idea is exposed through different service styles:
 
-![Different service semantics (SOAP, REST, SFTP, FTPs) between systems](assets/images/slide-4-diagram.png)
+<img src="assets/images/slide-4-diagram.png" width="560" alt="Different service semantics (SOAP, REST, SFTP, FTPs) between systems">
 
 - Their Systems ↔ Your System ↔ Some more Systems
 - SOAP
@@ -42,7 +42,7 @@ The same idea is exposed through different service styles:
 
 And the payload formats never line up either:
 
-![Different payload formats (XML, JSON, CSV, separated) between systems](assets/images/slide-5-diagram.png)
+<img src="assets/images/slide-5-diagram.png" width="560" alt="Different payload formats (XML, JSON, CSV, separated) between systems">
 
 - Their Systems ↔ Your System ↔ Some more Systems
 - `< XML >`
@@ -52,6 +52,10 @@ And the payload formats never line up either:
 
 ## Key Problem
 
+<table>
+<tr>
+<td valign="top">
+
 - Same spelling != Same meaning
   - Different spelling != Different meaning
 - Same spelling != Same format/validations
@@ -59,9 +63,16 @@ And the payload formats never line up either:
 - Same packet != Same functional semantics
 - Same key != Same Cardinality
 
-Examples of the same key meaning different things:
+</td>
+<td valign="top">
 
-![Individual Data vs Corporate Data colored comparison boxes](assets/images/slide-6-diagram.png)
+<img src="assets/images/slide-6-diagram.png" width="520" alt="Individual Data vs Corporate Data colored comparison boxes">
+
+</td>
+</tr>
+</table>
+
+<details><summary>Text version of the comparison</summary>
 
 | Individual Data | Corporate Data |
 | --- | --- |
@@ -71,40 +82,69 @@ Examples of the same key meaning different things:
 | Savings Account `{Balance : 4567 }` | Credit Card `{Balance=7890}` |
 | `Spouse =""` | `Spouse =["","",""]` |
 
+</details>
+
 ## Interpretation Problem
+
+<table>
+<tr>
+<td valign="top">
 
 - Hidden Processing clues
 - Hidden Interrelations
 
-Same-looking packets carry hidden processing clues:
+</td>
+<td valign="top">
 
-![Colored packet boxes showing hidden processing clues and interrelations](assets/images/slide-7-diagram.png)
+<img src="assets/images/slide-7-diagram.png" width="520" alt="Colored packet boxes showing hidden processing clues and interrelations">
+
+</td>
+</tr>
+</table>
+
+<details><summary>Text version of the packets</summary>
 
 | | |
 | --- | --- |
 | `{Ac Type: Savings, Account # : 1234, Balance : 4567, }` | `{Ac Type : Loan, Account # : 1234, Balance=7890}` |
 | `{Name:"", Age:"45", Driving License:"", Marital Status:"" }` | `{Name:"", Age:"15", Driving License:"", Marital Status:"" }` |
 
+</details>
+
 ## Data Mess
+
+<table>
+<tr>
+<td valign="top">
 
 - Too Much Data
 - Nesting : Pure nesting, graph loops, self reference, Matrix reference, Defaulting
 
-![Colored boxes showing too much / deeply nested data](assets/images/slide-8-diagram.png)
+</td>
+<td valign="top">
+
+<img src="assets/images/slide-8-diagram.png" width="520" alt="Colored boxes showing too much / deeply nested data">
+
+</td>
+</tr>
+</table>
+
+<details><summary>Text version of the payloads</summary>
 
 | | |
 | --- | --- |
 | `{ Name:"CEOs", Reporting Folks:[Directors ]}` | `{Name : "Campus, Reporting Folks:[All the students ]}` |
 | `{Ac # :1234, Type : Corp Main, Parent Account : NA, Authorized : [] }` | `{Ac #: 4567, Type : Regional, Parent Account :{Ac # ,Authorized :[]}, Authorized : [] }` |
 
+</details>
+
 ## Data Destination Differences
 
 The same data has to fan out to many destinations — Your System, Some System, Some more Systems — each expecting something slightly different.
 
-![Data fanning out from Your System to multiple destinations with crossed routing](assets/images/slide-9-diagram.png)
+<img src="assets/images/slide-9-diagram.png" width="600" alt="Data fanning out from Your System to multiple destinations with crossed routing">
 
-![We need to talk](assets/images/slide-9-img1.jpg)
-![We need to talk](assets/images/slide-9-img2.jpg)
+<img src="assets/images/slide-9-img1.jpg" width="180" alt="We need to talk"> <img src="assets/images/slide-9-img2.jpg" width="180" alt="We need to talk">
 
 ## Data Destination Differences (Enterprise Integration Patterns)
 
@@ -133,6 +173,10 @@ Usual attempts to handle these situations:
 
 ## Standardized format
 
+<table>
+<tr>
+<td valign="top">
+
 - Standardization
   - Saves Effort
   - Less Bugs
@@ -146,27 +190,49 @@ Usual attempts to handle these situations:
   - Product cant Evolve
   - Very Open to Hacking : UDFs/Open to any data type fields
 
-Merging disparate payloads into one "standard" shape:
+</td>
+<td valign="top">
 
-![Payloads merged into a standardized shape (good) vs accumulated shape (trap)](assets/images/slide-12-diagram.png)
+<img src="assets/images/slide-12-diagram.png" width="520" alt="Payloads merged into a standardized shape (good) vs accumulated shape (trap)">
+
+</td>
+</tr>
+</table>
+
+<details><summary>Text version of the payload flow</summary>
 
 - Inputs get combined — `{Address="Name",}` + `{employee="sachin", Id:1234, Manager:"Name"}` + `{KeySkills:[], University : "Stanford", BankAcc# : 12345 }`
 - Standardization (good case) → `{Name="sachin", Emp:1234, Address="…….", Manager:"Name"}`
 - Accumulation (the trap) → `{Name="sachin", Emp:1234, Address="…….", Manager:"Name", KeySkills:[], University : "Stanford", BankAcc# : 12345, UDF=""}`
 
+</details>
+
 ## Generic Services
+
+<table>
+<tr>
+<td valign="top">
 
 - Another name for accumulated payload with mannny fields
 - Insists on one service to handle them all
 - At times banks on generic tables to load the segregate data !
 - As cute as a trap can get
 
-Same accumulation problem, now expressed as one do-it-all service:
+</td>
+<td valign="top">
 
-![Standardization (good) vs Accumulation (trap) payload flow](assets/images/slide-13-diagram.png)
+<img src="assets/images/slide-13-diagram.png" width="520" alt="Standardization (good) vs Accumulation (trap) payload flow">
+
+</td>
+</tr>
+</table>
+
+<details><summary>Text version of the payload flow</summary>
 
 - Standardization (good case) → `{Name="sachin", Emp:1234, Address="…….", Manager:"Name"}`
 - Accumulation (the trap) → `{Name="sachin", Emp:1234, Address="…….", Manager:"Name", KeySkills:[], University : "Stanford", BankAcc# : 12345 }`
+
+</details>
 
 ## Automatic codeless
 
