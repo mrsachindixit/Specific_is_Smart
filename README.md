@@ -6,6 +6,8 @@
 
 A picture of the integration landscape you begin from:
 
+![Your System connected to Their Systems and Some more Systems](assets/images/slide-2-diagram.png)
+
 - **Your System**
 - **Their Systems**
 - **Some more Systems**
@@ -15,6 +17,8 @@ A picture of the integration landscape you begin from:
 ## Protocols Are Different
 
 Every system you connect to talks over a different protocol:
+
+![Different protocols (http, ftp, wss) between systems](assets/images/slide-3-diagram.png)
 
 - Their Systems ↔ Your System ↔ Some more Systems
 - `http`
@@ -26,6 +30,8 @@ Every system you connect to talks over a different protocol:
 
 The same idea is exposed through different service styles:
 
+![Different service semantics (SOAP, REST, SFTP, FTPs) between systems](assets/images/slide-4-diagram.png)
+
 - Their Systems ↔ Your System ↔ Some more Systems
 - SOAP
 - REST
@@ -35,6 +41,8 @@ The same idea is exposed through different service styles:
 ## Formats Are Different
 
 And the payload formats never line up either:
+
+![Different payload formats (XML, JSON, CSV, separated) between systems](assets/images/slide-5-diagram.png)
 
 - Their Systems ↔ Your System ↔ Some more Systems
 - `< XML >`
@@ -53,6 +61,8 @@ And the payload formats never line up either:
 
 Examples of the same key meaning different things:
 
+![Individual Data vs Corporate Data colored comparison boxes](assets/images/slide-6-diagram.png)
+
 | Individual Data | Corporate Data |
 | --- | --- |
 | `{ name="Sachin" }` | `{ name="Apple Soft" }` |
@@ -68,6 +78,8 @@ Examples of the same key meaning different things:
 
 Same-looking packets carry hidden processing clues:
 
+![Colored packet boxes showing hidden processing clues and interrelations](assets/images/slide-7-diagram.png)
+
 | | |
 | --- | --- |
 | `{Ac Type: Savings, Account # : 1234, Balance : 4567, }` | `{Ac Type : Loan, Account # : 1234, Balance=7890}` |
@@ -78,6 +90,8 @@ Same-looking packets carry hidden processing clues:
 - Too Much Data
 - Nesting : Pure nesting, graph loops, self reference, Matrix reference, Defaulting
 
+![Colored boxes showing too much / deeply nested data](assets/images/slide-8-diagram.png)
+
 | | |
 | --- | --- |
 | `{ Name:"CEOs", Reporting Folks:[Directors ]}` | `{Name : "Campus, Reporting Folks:[All the students ]}` |
@@ -86,6 +100,8 @@ Same-looking packets carry hidden processing clues:
 ## Data Destination Differences
 
 The same data has to fan out to many destinations — Your System, Some System, Some more Systems — each expecting something slightly different.
+
+![Data fanning out from Your System to multiple destinations with crossed routing](assets/images/slide-9-diagram.png)
 
 ![We need to talk](assets/images/slide-9-img1.jpg)
 ![We need to talk](assets/images/slide-9-img2.jpg)
@@ -132,6 +148,8 @@ Usual attempts to handle these situations:
 
 Merging disparate payloads into one "standard" shape:
 
+![Payloads merged into a standardized shape (good) vs accumulated shape (trap)](assets/images/slide-12-diagram.png)
+
 - Inputs get combined — `{Address="Name",}` + `{employee="sachin", Id:1234, Manager:"Name"}` + `{KeySkills:[], University : "Stanford", BankAcc# : 12345 }`
 - Standardization (good case) → `{Name="sachin", Emp:1234, Address="…….", Manager:"Name"}`
 - Accumulation (the trap) → `{Name="sachin", Emp:1234, Address="…….", Manager:"Name", KeySkills:[], University : "Stanford", BankAcc# : 12345, UDF=""}`
@@ -144,6 +162,8 @@ Merging disparate payloads into one "standard" shape:
 - As cute as a trap can get
 
 Same accumulation problem, now expressed as one do-it-all service:
+
+![Standardization (good) vs Accumulation (trap) payload flow](assets/images/slide-13-diagram.png)
 
 - Standardization (good case) → `{Name="sachin", Emp:1234, Address="…….", Manager:"Name"}`
 - Accumulation (the trap) → `{Name="sachin", Emp:1234, Address="…….", Manager:"Name", KeySkills:[], University : "Stanford", BankAcc# : 12345 }`
