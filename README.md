@@ -1,54 +1,28 @@
-﻿# Specific is Smart
+# Specific is Smart
 
 *By Sachin Dixit*
 
 ## It Starts With…
 
-A picture of the integration landscape you begin from:
-
-<img src="assets/images/slide-2-diagram.png" width="560" alt="Your System connected to Their Systems and Some more Systems">
-
-- **Your System**
-- **Their Systems**
-- **Some more Systems**
-
-<img src="assets/images/slide-2-img1.jpg" width="200" alt="We need to talk">
+<img src="assets/images/slide-2-diagram.png" width="640" alt="Your System wired to four Their Systems boxes and Some more Systems, with a we-need-to-talk cat">
 
 ## Protocols are different
 
-Every system you connect to talks over a different protocol:
+<img src="assets/images/slide-3-diagram.png" width="600" alt="Your System connected to boxes labeled http, ftp, wss, and Some blah">
 
-<img src="assets/images/slide-3-diagram.png" width="560" alt="Different protocols (http, ftp, wss) between systems">
-
-- Their Systems ↔ Your System ↔ Some more Systems
-- `http`
-- `ftp`
-- `wss`
-- Some blah
+Protocols in play across the systems: `http`, `ftp`, `wss`, and "Some blah".
 
 ## Semantics are different
 
-The same idea is exposed through different service styles:
+<img src="assets/images/slide-4-diagram.png" width="600" alt="Your System connected to boxes labeled SOAP, REST, SFTP, FTPs">
 
-<img src="assets/images/slide-4-diagram.png" width="560" alt="Different service semantics (SOAP, REST, SFTP, FTPs) between systems">
-
-- Their Systems ↔ Your System ↔ Some more Systems
-- SOAP
-- REST
-- SFTP
-- FTPs
+Service styles across the systems: SOAP, REST, SFTP, FTPs.
 
 ## Formats are different
 
-And the payload formats never line up either:
+<img src="assets/images/slide-5-diagram.png" width="600" alt="Your System connected to boxes labeled XML, JSON, CSV, separated">
 
-<img src="assets/images/slide-5-diagram.png" width="560" alt="Different payload formats (XML, JSON, CSV, separated) between systems">
-
-- Their Systems ↔ Your System ↔ Some more Systems
-- `< XML >`
-- `{ JSON }`
-- `C,S,V`
-- `|s|e|p|e|r|a|t|e|d|`
+Payload formats across the systems: `< XML >`, `{ JSON }`, `C,S,V`, `|s|e|p|e|r|a|t|e|d|`.
 
 ## Key Problem
 
@@ -140,11 +114,7 @@ And the payload formats never line up either:
 
 ## Data Destination Differences
 
-The same data has to fan out to many destinations — Your System, Some System, Some more Systems — each expecting something slightly different.
-
-<img src="assets/images/slide-9-diagram.png" width="600" alt="Data fanning out from Your System to multiple destinations with crossed routing">
-
-<img src="assets/images/slide-9-img1.jpg" width="180" alt="We need to talk"> <img src="assets/images/slide-9-img2.jpg" width="180" alt="We need to talk">
+<img src="assets/images/slide-9-diagram.png" width="640" alt="Data fanning out from Your System to Some System and Some more Systems with crossed routing arrows and two we-need-to-talk cats">
 
 ## Data Destination Differences (Enterprise Integration Patterns)
 
