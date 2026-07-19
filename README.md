@@ -120,14 +120,20 @@ Payload formats across the systems: `< XML >`, `{ JSON }`, `C,S,V`, `|s|e|p|e|r|
 
 The recurring shapes of this problem are captured by the Enterprise Integration Patterns catalog:
 
-![EIP pattern](assets/images/slide-10-img1.gif)
-![EIP pattern](assets/images/slide-10-img2.gif)
-![EIP pattern](assets/images/slide-10-img3.gif)
-![EIP pattern](assets/images/slide-10-img4.gif)
-![EIP pattern](assets/images/slide-10-img5.gif)
-![EIP pattern](assets/images/slide-10-img6.gif)
-![EIP pattern](assets/images/slide-10-img7.gif)
-![EIP pattern](assets/images/slide-10-img8.gif)
+<table>
+<tr>
+<td><img src="assets/images/slide-10-img1.gif" width="200" alt="EIP pattern"></td>
+<td><img src="assets/images/slide-10-img2.gif" width="200" alt="EIP pattern"></td>
+<td><img src="assets/images/slide-10-img3.gif" width="200" alt="EIP pattern"></td>
+<td><img src="assets/images/slide-10-img4.gif" width="200" alt="EIP pattern"></td>
+</tr>
+<tr>
+<td><img src="assets/images/slide-10-img5.gif" width="200" alt="EIP pattern"></td>
+<td><img src="assets/images/slide-10-img6.gif" width="200" alt="EIP pattern"></td>
+<td><img src="assets/images/slide-10-img7.gif" width="200" alt="EIP pattern"></td>
+<td><img src="assets/images/slide-10-img8.gif" width="200" alt="EIP pattern"></td>
+</tr>
+</table>
 
 *© Gregor Hohpe, Bobby Woolf*
 
@@ -206,17 +212,32 @@ Usual Attempts to handle these situations:
 
 ## Automatic codeless
 
+<table>
+<tr>
+<td valign="top">
+
 - Integrations are known
 - Robust components
 - Mature (microservices ?) Architecture
 - Finite Possibilities
 - Real CD
 
-![Unicorn](assets/images/slide-14-img1.jpg)
+</td>
+<td valign="top">
+
+<img src="assets/images/slide-14-img1.jpg" width="440" alt="Unicorn">
+
+</td>
+</tr>
+</table>
 
 *© Inc.com*
 
 ## Dynamic Flow Adapter
+
+<table>
+<tr>
+<td valign="top">
 
 - Pre made components
 - Mix and Match
@@ -226,6 +247,11 @@ Usual Attempts to handle these situations:
 - Hidden Engine beneath
 - Can morph into ESB ☹
 - Faster way to MVP !
+
+</td>
+<td valign="top">
+
+<img src="assets/images/slide-15-img1.jpg" width="70" alt="Apache Camel logo">
 
 Example routing DSL (Apache Camel):
 
@@ -237,12 +263,19 @@ from("direct:a")
   .otherwise() .to("direct:d")
 ```
 
-![Apache Camel](assets/images/slide-15-img1.jpg)
-![Node-RED flow node](assets/images/slide-15-img3.png)
-![Node-RED editor](assets/images/slide-15-img2.png)
-![Camunda Modeler](assets/images/slide-15-img4.png)
+</td>
+</tr>
+</table>
+
+Tools in this space — Node-RED and Camunda Modeler:
+
+<img src="assets/images/slide-15-img2.png" width="320" alt="Node-RED editor"> <img src="assets/images/slide-15-img3.png" width="240" alt="Node-RED flow: timestamp to function to msg.payload"> <img src="assets/images/slide-15-img4.png" width="320" alt="Camunda Modeler (BPMN leave-approval flow)">
 
 ## UI Based Mapper
+
+<table>
+<tr>
+<td valign="top">
 
 - Is it Dynamic Flow Adapter with UI
   - OR
@@ -251,7 +284,14 @@ from("direct:a")
   - Mostly for data in-data out
   - Can also into sql query mapper over nosql !
 
-![UI based data mapper](assets/images/slide-16-img1.png)
+</td>
+<td valign="top">
+
+<img src="assets/images/slide-16-img1.png" width="520" alt="Syndesis UI data mapper mapping source fields to target Salesforce contact fields">
+
+</td>
+</tr>
+</table>
 
 ## In the End
 
